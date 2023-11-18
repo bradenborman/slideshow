@@ -1,0 +1,40 @@
+// controls.scss
+
+.controls-container {
+    position: fixed;
+    bottom: 7vh; // Adjusted for a higher position
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; // Adjust as needed
+    background-color: #f0f0f0; // Button background color
+    padding: 20px 50px; // Adjust as needed
+    border-radius: 5px; // Adjust as needed
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Adjust as needed
+    transition: background-color 0.2s ease; // Transition background-color
+}
+
+.controls-container>* {
+    opacity: 0.4; // Set initial opacity for children
+    transition: opacity 0.2s ease; // Transition opacity
+}
+
+.controls-container:hover>* {
+    opacity: 1; // Restore opacity on hover
+}
+
+.button {
+    color: #ffffff; // Button text color
+    background-color: #3498db; // Button background color
+    padding: 10px 15px; // Adjusted for the same size
+    border: none;
+    border-radius: 5px; // Adjusted for the same size
+    cursor: pointer;
+    font-size: 16px; // Adjust as needed
+    width: 100px; // Set a specific width
+    height: 40px; // Set a specific height
+}
+
+.button:hover {
+    background-color: #2077b1; // Change button background color on hover
+}

@@ -1,0 +1,31 @@
+.slideshow-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 100vw;
+    height: 100vh;
+}
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.slideshow-item {
+    position: absolute;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+    z-index: 1; // Default z-index for non-active items
+    max-width: 300px;
+    filter: blur(2px); // Add blur effect to non-active items
+    opacity: 0.5; // Set opacity for non-active items
+}
+
+.slideshow-item.active {
+    z-index: 2;
+    filter: none; // Remove blur for active item
+    opacity: 1; // Set full opacity for active item
+}

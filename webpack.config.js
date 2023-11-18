@@ -1,11 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
     entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.[fullhash].js', // Use [fullhash] in the filename
+        filename: 'bundle.[fullhash].js',
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.scss'],
@@ -39,6 +40,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: './src/images',
+                    to: 'images',
+                },
+            ],
         }),
     ],
     devServer: {
