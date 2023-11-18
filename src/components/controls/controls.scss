@@ -1,5 +1,3 @@
-// controls.scss
-
 .controls-container {
     position: fixed;
     bottom: 7vh; // Adjusted for a higher position
@@ -26,15 +24,18 @@
 .button {
     color: #ffffff; // Button text color
     background-color: #3498db; // Button background color
-    padding: 10px 15px; // Adjusted for the same size
+    padding: 15px; // Adjusted for the same size
     border: none;
     border-radius: 5px; // Adjusted for the same size
     cursor: pointer;
-    font-size: 16px; // Adjust as needed
-    width: 100px; // Set a specific width
-    height: 40px; // Set a specific height
+    font-size: 24px; // Adjust as needed
+    width: 150px; // Set a specific width
 }
 
-.button:hover {
-    background-color: #2077b1; // Change button background color on hover
+.button:disabled {
+    cursor: not-allowed; // Set cursor to not-allowed when button is disabled
+}
+
+.button:hover:not(:disabled) {
+    background-color: #2077b1; // Change button background color on hover, but not when disabled
 }

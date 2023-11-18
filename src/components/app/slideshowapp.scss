@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,600&family=Cabin&family=Kanit:wght@300&family=Mukta:wght@600&display=swap');
+
 @import "../slideshow/slideshow.scss";
 @import "../controls/controls.scss";
 
-.slideshow-app {
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed';
 }

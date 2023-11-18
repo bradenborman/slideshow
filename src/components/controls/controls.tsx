@@ -1,13 +1,20 @@
 import React, { FC } from 'react';
 import './controls.scss';
 
-const Controls: FC<{ onNext: () => void; onPrev: () => void }> = ({ onNext, onPrev }) => {
+interface ControlsProps {
+    onNext: () => void;
+    onPrev: () => void;
+    disableNext: boolean;
+    disablePrev: boolean;
+}
+
+const Controls: FC<ControlsProps> = ({ onNext, onPrev, disableNext, disablePrev }) => {
     return (
         <div className="controls-container">
-            <button className="button" onClick={onPrev}>
+            <button className="button" onClick={onPrev} disabled={disablePrev}>
                 Previous
             </button>
-            <button className="button" onClick={onNext}>
+            <button className="button" onClick={onNext} disabled={disableNext}>
                 Next
             </button>
         </div>
